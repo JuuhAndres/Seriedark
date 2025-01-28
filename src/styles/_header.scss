@@ -1,0 +1,36 @@
+@use 'variaveis';
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #000000c4;
+
+    @media (max-width:768px) {
+        position: sticky;
+        padding: 0;
+    }
+
+    &__container{
+        padding: 7px 25px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+
+        &__logo{
+            img{
+                height: 60px;
+                filter: drop-shadow(0 0 15px #ffff);
+                transition: 0.2s;
+
+                &:hover{
+                    filter: drop-shadow(0 0 15px #ffff00);
+                }
+                
+            }
+        }
+       
+    }
+}

@@ -1,0 +1,15 @@
+$corPrimario:#030303;
+$corDeTexto:#ffff;
+$corDeSombra:#ffff00be;
+//$corDeFundoTerciario:#e17203;
+$fonteTitulos: 'Roboto';
+$fonteTextos: 'Poppins';
+
+@font-face {
+    font-family: Poppins;
+    src: url(../../dist/font/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../../dist/font/Roboto-VariableFont_wdth\,wght.ttf);
+}

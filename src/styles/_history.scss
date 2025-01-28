@@ -1,0 +1,48 @@
+@use 'variaveis';
+
+.history{
+    background: radial-gradient(circle, rgb(1, 0, 9) 0%, rgba(212, 227, 51, 0.173) 50%, rgb(2, 1, 17) 100%);
+
+
+    padding-top: 4.5em;
+    &__title{
+        text-align: center;
+        font-family: variaveis.$fonteTitulos,sans-serif;
+        color: variaveis.$corDeTexto;
+        margin-bottom: 40px;
+        font-size: 3em;
+        @media (max-width:768px) {
+            font-size: 2em;
+        }
+
+    }
+    &__title__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        padding: 30px 20px;
+        min-height: 100vh;
+        text-align: center;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width:768px) {
+            display: block;
+        }
+
+
+
+        img{
+            max-width: 100%;
+            height: 70%;
+            
+        }
+        p{
+            color: variaveis.$corDeTexto;
+            text-align: center;
+            font-size: 14px;
+            font-family: variaveis.$fonteTextos;
+        }
+    }
+}

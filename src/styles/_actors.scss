@@ -1,0 +1,76 @@
+@use 'variaveis';
+.actors{
+    background: radial-gradient(circle, rgb(1, 0, 9) 0%, rgba(193, 193, 40, 0.347) 50%, rgb(2, 1, 17) 100%);
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+    
+    h2{
+        text-align: center;
+        font-size: 3em;
+        font-family: variaveis.$fonteTitulos;
+        color: variaveis.$corDeTexto;
+
+    }
+    
+
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        list-style: none;
+        margin-top: 40px;
+
+        @media (max-width:768px) {
+            display: block;
+            
+        }
+
+        
+        
+        &__box{
+            position: relative;
+            margin-bottom: 40px;
+            width: 200px;
+            height: 400px;
+            box-shadow: 1px 1px 15px 2px #ffff008f;
+            background-size:cover ;
+            border-radius: 35px;
+            transition: .5s;
+            cursor: pointer;
+            @media (max-width:768px) {
+                display: block;
+                max-width: 100%;
+                width: 65%;
+                margin-bottom: 50px;
+                margin-left: 70px;
+            }
+            
+
+            &:hover{
+                scale: 1.2;
+                transition: .5s;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background:inherit;
+                background:rgba(0, 0, 0, 0.9) ;
+                background-size: cover;
+                border-radius: 35px;
+                background-blend-mode: darken;
+                opacity: 0.5;
+                z-index: 1;
+                transition: .2s;
+                
+                
+            }
+            &:hover::before{
+                opacity: 0;
+                transition: .2s;
+            }
+
+        }
+    }
+}
